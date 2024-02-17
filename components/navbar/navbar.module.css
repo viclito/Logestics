@@ -1,0 +1,78 @@
+.glass{
+    background: rgba( 255, 255, 255, 0.55 );
+box-shadow: 0px 1px 32px 0 #f3efe8;
+backdrop-filter: blur( 15.5px );
+-webkit-backdrop-filter: blur( 15.5px );
+}
+
+.glasscomponent{
+    background: rgba( 220, 240, 255, 0.5 );
+box-shadow: 0 1px 10px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 8px );
+-webkit-backdrop-filter: blur( 8px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.image:has(.one:hover) , .image:has(.one:hover) img{
+    width: 670px;
+    height: 400px;
+    border-radius: 10px;
+    z-index: 40;
+    left: 0;
+    top: 0;
+}
+.image:has(.two:hover) , .image:has(.two:hover) img{
+    width: 670px;
+    height: 400px;
+    border-radius: 10px;
+    z-index: 40;
+    left: 0;
+    top: 0;
+}
+.image:has(.three:hover) , .image:has(.three:hover) img{
+    width: 670px;
+    height: 400px;
+    border-radius: 10px;
+    z-index: 40;
+    left: 0;
+    top: 0;
+}
+.image:has(.four:hover) , .image:has(.four:hover) img{
+    width: 670px;
+    height: 400px;
+    border-radius: 10px;
+    z-index: 40;
+    left: 0;
+    top: 0;
+}
+.image:has(.five:hover) , .image:has(.five:hover) img{
+    width: 670px;
+    height: 400px;
+    border-radius: 10px;
+    z-index: 40;
+    left: 0;
+    top: 0;
+}
+@media (max-width:767px){
+    .image:has(.one:hover) , .image:has(.one:hover) img{
+        width: 360px;
+        height: 290px;
+    }
+    .image:has(.two:hover) , .image:has(.two:hover) img{
+        width: 360px;
+        height: 290px;
+    }
+    .image:has(.three:hover) , .image:has(.three:hover) img{
+        width: 360px;
+        height: 290px;
+    }
+    .image:has(.four:hover) , .image:has(.four:hover) img{
+        width: 360px;
+        height: 290px;
+    }
+    .image:has(.five:hover) , .image:has(.five:hover) img{
+        width: 360px;
+        height: 290px;
+    }
+}
