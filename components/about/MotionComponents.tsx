@@ -24,7 +24,6 @@ export const YouCan:React.FC<YouCanis> = ({children}) => {
 
 
 interface AnimateNumberProps {
-    Children:ReactNode;
     value: number;
   }
 
