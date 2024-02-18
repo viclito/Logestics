@@ -4,6 +4,7 @@ import landing from '../../public/assets/png2.jpg'
 import styles from '../navbar/navbar.module.css'
 import whatsapp from '../../public/assets/whatsapp.png'
 import gmail from '../../public/assets/gmail.png'
+import toppng from '../../public/assets/toppng.png'
 import telephone from '../../public/assets/telephone.png'
 import { motion } from "framer-motion"
 
@@ -14,7 +15,8 @@ const Landingpage = () => {
         setContact(!contact)
     }
   return (
-    <>
+    <div className='w-screen relative'>
+        <Image src={toppng} alt='' className='absolute z-0 top-0 left-0 w-[60%] h-auto'/>
         <div className='max-w-[1400px] m-auto py-14 relative'>
             <h4 className='capitalize font-medium text-6xl lg:text-5xl md:text-3xl absolute lg:relative text-start pl-6 leading-normal lg:text-center'>flexible <span className='font-bold'><span className='text-primary'>LOGESTICS</span> <br /> & CARGO </span> Services</h4>
             <div className='w-[100%] flex p-7 items-center lg:flex-col'>
@@ -44,7 +46,7 @@ const Landingpage = () => {
             </div>
         </div>
         
-    </>
+    </div>
   )
 }
 

@@ -21,7 +21,12 @@ const config: Config = {
         dark : "#1b1b1b", 
         light:"#f5f5f5",
         primary:"#2f6fcf",
-        primaryDark : "#58E6D9"
+        primaryDark : "#58E6D9",
+        gradient: {
+          start: "#ffffff", // Start color
+          end: "#b9cff0",   // End color
+        },
+
       }, 
       animation:{
         'spin-slow':'spin 8s linear infinite'

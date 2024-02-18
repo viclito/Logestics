@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import React, { useState } from 'react'
 import Styles  from './navbar.module.css';
 import {motion } from 'framer-motion'
-import logo from '../../public/assets/JLogo-01.png'
+import logo from '../../public/assets/JLogo-01.png' 
 // import logo from '../../public/assets/ship.png'
 import Image from 'next/image';
 
