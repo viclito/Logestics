@@ -67,7 +67,7 @@ const Navbar = () => {
               <div className="flex gap-6 text-white xs:flex-col">
                   <CustomLink href='/'>Home</CustomLink>
                   <CustomLink href='/about'>About</CustomLink>
-                  <CustomLink href='/projects'>Projects</CustomLink>
+                  <CustomLink href='/blog'>Blog</CustomLink>
                   <CustomLink href='/contact'>Contact</CustomLink>
               </div>        
             </motion.div>:""}
