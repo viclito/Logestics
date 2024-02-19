@@ -4,6 +4,7 @@ import mission1 from '../../public/assets/mission1.jpg'
 import mission2 from '../../public/assets/mission2.jpg'
 import mission3 from '../../public/assets/mission3.jpg'
 import mission4 from '../../public/assets/mission4.jpg'
+
 import missionmiddle from '../../public/assets/missionmiddle.jpg'
 import AbLanPTag from './AbLanPTag'
 
@@ -12,7 +13,8 @@ const AbLanding = () => {
   return (
     <>
         <div>
-            <div className='max-w-[1400px] mx-auto py-12 md:pb-2'>
+            
+            <div className='max-w-[1400px] mx-auto py-12 md:pb-2 relative z-10'>
                 <h2 className='font-bold text-4xl lg:text-3xl md:text-2xl  text-center text-primary'>Our Mission</h2>
                 <p className='font-bold text-sm py-6 text-center max-w-[800px] m-auto leading-6'>At <span className='text-primary'>J Logistics</span>,
                  we do not just move goods; <span className='text-primary'>we connect continents and deliver dreams</span>. Our vision is rooted in the 
@@ -49,7 +51,7 @@ const AbLanding = () => {
 
 
         <div>
-            <div className='max-w-[1400px] mx-auto py-16 flex md:flex-col gap-6'>
+            <div className='max-w-[1400px] mx-auto py-16 flex md:flex-col gap-6 relative z-10'>
                 <h2 className='w-[45%] md:w-[100%] font-bold text-3xl lg:text-2xl md:text-xl  text-center'>
                   What is Our <span className=' text-primary'>Brand Anthem</span>  ?
                 </h2>

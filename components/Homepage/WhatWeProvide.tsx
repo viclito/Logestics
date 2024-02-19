@@ -31,6 +31,7 @@ const WhatWeProvide = () => {
                   </motion.div>
                 </div>
             </div>
+            <video src="/assets/gravity Loader.aco" className='h-10 w-10'/>
         </div> 
     </>
   )

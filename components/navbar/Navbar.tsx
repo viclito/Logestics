@@ -22,7 +22,7 @@ const Navbar = () => {
         const router = useRouter();
       
         return (
-          <div className={`font-medium px-3 py-1 text-sm relative group cursor-pointer border-2 border-solid rounded-2xl hover:bg-primary hover:text-white hover:border-primary ${router.asPath === href ? 'bg-primary text-white' : ' text-black'}`} onClick={() => router.push(href)}>
+          <div className={`font-medium px-3 py-1 text-sm relative group cursor-pointer border-2 border-solid rounded-2xl md:text-white hover:bg-primary hover:text-white hover:border-primary ${router.asPath === href ? 'bg-primary text-white' : ' text-black'}`} onClick={() => router.push(href)}>
             <a href={href}>
               {children}
             </a>
@@ -33,7 +33,7 @@ const Navbar = () => {
       };
   return (
     <>
-      <div className={`sticky top-0 z-50 ${Styles.glass}`}>
+      <div className={`sticky top-0 z-50 w-screen ${Styles.glass}`}>
         <div className={`max-w-[1400px] m-auto px-6 py-2 flex items-center justify-between .glass `}>
             {/* logo */}
             <div className=''>

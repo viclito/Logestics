@@ -5,12 +5,16 @@ import inventory from '../../public/assets/inventory.png'
 import information from '../../public/assets/information.png'
 import supplyChain from '../../public/assets/supply-chain.png'
 import { AnimateNumber, YouCan } from './MotionComponents'
+import Ellipse1 from '../../public/assets/Ellipse1.png'
+import Ellipse2 from '../../public/assets/Ellipse3.png'
 import Image from 'next/image'
 
 const AbWhatUCan = () => {
   return (
-    <>
-        <div className='max-w-[1200px] mx-auto py-12 md:py-2'>
+    <div className='relative'>
+        {/* <Image src={Ellipse1} alt='' className='absolute right-[0%] bottom-[32%] w-[900px] h-auto z-0 -rotate-45'/> */}
+        <Image src={Ellipse2} alt='' className='absolute left-[1%] -top-[30%] w-[1000px] h-auto z-0 rotate-180 blur-2xl'/>
+        <div className='max-w-[1200px] mx-auto py-12 md:py-2 relative z-10'>
             <h2 className='font-bold text-4xl lg:text-3xl md:text-2xl  text-start md:text-center py-6 pb-10'>With J Logesticts , <span className='text-primary'>U can</span> </h2>
 
             <div className='flex flex-col gap-8 max-w-[1200px] mx-auto'>
@@ -55,7 +59,7 @@ const AbWhatUCan = () => {
             </div>
             
         </div>
-        <div className='max-w-[1200px] mx-auto py-32'>
+        <div className='max-w-[1200px] mx-auto py-32 relative z-10'>
             <div className='flex flex-col gap-28 w-[100%]'>
                 <div className='flex w-[100%]'>
                     <div className='flex flex-col gap-1 w-[33%] items-center'>
@@ -81,7 +85,7 @@ const AbWhatUCan = () => {
             </div>
             
         </div>
-    </>
+    </div>
   )
 }
 
