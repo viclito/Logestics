@@ -18,7 +18,7 @@ const config: Config = {
         mont: ['var(--font-mont)', ...fontFamily.sans]
       },
       colors:{
-        dark : "#1b1b1b", 
+        dark : "#122c52", 
         light:"#f5f5f5",
         primary:"#2f6fcf",
         primaryDark : "#58E6D9",
