@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import map from '../../public/assets/Frame.png'
+import map from '../../public/assets/Frame2.png'
 
 const Map = () => {
   return (
