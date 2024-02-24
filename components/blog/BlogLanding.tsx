@@ -48,36 +48,36 @@ const BlogLanding = () => {
                 <h1 className='text-3xl font-bold pb-8'>Blog</h1>
                 <div className='flex w-[100%] gap-4 md:flex-col'>
                     <div className='w-[40%] md:w-[100%] gap-4 flex xs:flex-col xs:items-center pb-9'>
-                        <div className='w-[50%] flex flex-col gap-2 xs:w-[90%] xs:items-center'>
+                        <Link href="/freightForwarding" className='w-[50%] flex flex-col gap-2 xs:w-[90%] xs:items-center'>
                             <Image src={ocean} alt='' className='w-[100%] h-[130px] xs:h-[160px] rounded-lg'/>
                             <h3 className='text-sm font-semibold'>Simplifying Freight Forwarding</h3>
-                            <Link href="/freightForwarding" className='self-end text-xs text-primary'>Read more</Link>
-                        </div>
-                        <div className='w-[50%] flex flex-col gap-2 xs:w-[90%] '>
+                            <p  className='self-end text-xs text-primary'>Read more</p>
+                        </Link>
+                        <Link href="/clearance" className='w-[50%] flex flex-col gap-2 xs:w-[90%] '>
                             <Image src={air} alt='' className='w-[100%] h-[130px] xs:h-[160px] rounded-lg'/>
                             <h3 className='text-sm font-semibold'>Navigating the World of Customs Clearance</h3>
-                            <Link href="/clearance" className='self-end text-xs text-primary'>Read more</Link>
-                        </div>
+                            <p className='self-end text-xs text-primary'>Read more</p>
+                        </Link>
                     </div>
                     
                     <div className='w-[40%] md:w-[100%] gap-4 flex xs:flex-col xs:items-center'>
-                        <div className='w-[50%] flex flex-col gap-2 xs:w-[90%]'>
+                        <Link href="/warehouse" className='w-[50%] flex flex-col gap-2 xs:w-[90%]'>
                             <Image src={breakbulk} alt='' className='w-[100%] h-[130px] xs:h-[160px] rounded-lg'/>
                             <h3 className='text-sm font-semibold'>The World of Warehousing</h3>
-                            <Link href="/warehouse" className='self-end text-xs text-primary'>Read more</Link>
-                        </div>
-                        <div className='w-[50%] flex flex-col gap-2 xs:w-[90%]'>
+                            <p className='self-end text-xs text-primary'>Read more</p>
+                        </Link>
+                        <Link href="/entrepreneurs" className='w-[50%] flex flex-col gap-2 xs:w-[90%]'>
                             <Image src={warhouse} alt='' className='w-[100%] h-[130px] xs:h-[160px] rounded-lg'/>
                             <h3 className='text-sm font-semibold'>The Entrepreneurial Journey</h3>
-                            <Link href="/entrepreneurs" className='self-end text-xs text-primary'>Read more</Link>
-                        </div>
+                            <p className='self-end text-xs text-primary'>Read more</p>
+                        </Link>
                     </div>
                     
-                    <div className='w-[20%]  md:w-[50%] flex flex-col gap-2 xs:w-[90%] xs:self-center'>
+                    <Link href="/freightForwarding" className='w-[20%]  md:w-[50%] flex flex-col gap-2 xs:w-[90%] xs:self-center'>
                         <Image src={multi} alt='' className='w-[100%] h-[130px] xs:h-[160px] rounded-lg'/>
                         <h3 className='text-sm font-semibold'>Delivering logistic services</h3>
-                        <Link href="/freightForwarding" className='self-end text-xs text-primary'>Read more</Link>
-                    </div>
+                        <p className='self-end text-xs text-primary'>Read more</p>
+                    </Link>
                 </div>
             </div>
         </div>

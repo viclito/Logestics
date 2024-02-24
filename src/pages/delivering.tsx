@@ -1,12 +1,12 @@
 import React from 'react'
 import { AnimatingDiv, BlogNavEle } from '../../components/about/MotionComponents'
 import Image from 'next/image'
-import png from '../../public/assets/Ellipse2.png'
+
 
 const Delivering = () => {
   return (
     <div className='max-w-[1400px] mx-auto flex flex-col items-center px-6'>
-        <Image src={png} alt='' className='fixed z-0 w-[1000px] top-[10%]'/>
+
         <BlogNavEle/>
         <div className='w-[100%] flex reative gap-3 z-10 pt-3'>
             
