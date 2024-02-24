@@ -4,15 +4,19 @@ import React, { useState ,ChangeEvent} from 'react'
 // import contactpng from '../../public/assets/contpng.png'
 import contactpng from '../../public/assets/Designer.png'
 import gmail from '../../public/assets/gmail.png'
-import { Button, FormControl, FormLabel, InputAdornment, Paper, Stack, TextField } from '@mui/material'
+import { Button, FormControl, FormLabel, Paper, Stack, TextField, Typography } from '@mui/material'
+import { sendContactForm } from '../../lib/api'
 
 const ContactDetails = () => {
     const [phoneNumber, setPhoneNumber] = useState('');
     const [email, setEmail] = useState<string>('');
     const [name, setName] = useState<string>('');
     const [message, setMessage] = useState<string>('');
+    const [successMessage, setSuccessMessage] = useState<string | null>(null);
     const [phoneNumberError, setPhoneNumberError] = useState<boolean>(false);
     const [emailError, setEmailError] = useState<boolean>(false);
+    const [Error, setError] = useState<string | null>(null);
+    
   
 
     const handlePhoneNumberChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -37,6 +41,64 @@ const ContactDetails = () => {
         const inputValue: string = event.target.value;
         setMessage(inputValue)
     }
+
+    // const handleSubmit = (e:any) => {
+    
+    //     sendContactForm(email,name,phoneNumber, message)
+      
+  
+    // }
+    const isFormValid = () => {
+        // Add validation logic based on your requirements
+        const isEmailValid: boolean = /^\S+@\S+\.\S+$/.test(email);
+        const isValidPhoneNumber: boolean = /^\d*$/.test(phoneNumber);
+        return (
+            name.trim() !== '' &&
+            email.trim() !== '' &&
+            isEmailValid &&
+            phoneNumber.trim() !== '' &&
+            isValidPhoneNumber &&
+            message.trim() !== ''
+        )
+      };
+
+    const handleSubmit = async (e: any) => {
+        e.preventDefault();
+
+        if (!isFormValid()) {
+            // Handle invalid form, e.g., show an error message
+            console.log('Please fill in all required fields');
+            setError('Please Fill the Form')
+            return;
+          }
+      
+        const formData = {
+          email: email, // Replace with the actual email value
+          name: name,             // Replace with the actual name value
+          phoneNumber: phoneNumber,     // Replace with the actual phoneNumber value
+          message: message, // Replace with the actual message value
+        };
+      
+        try {
+          await sendContactForm(formData);
+          // Handle success, e.g., show a success message or navigate to another page
+          setPhoneNumber('')
+          setName('')
+          setEmail('')
+          setMessage('')
+          setSuccessMessage('Our Team will Shortly Contact You');
+          setError('')
+          console.log('Form submitted successfully!')
+
+        } catch (error) {
+          // Handle error, e.g., show an error message
+          console.error('Error submitting form:', error);
+        }
+
+        
+      };
+
+
   return (
     <>
         <div className='w-screen relative'>
@@ -58,18 +120,18 @@ const ContactDetails = () => {
                         </div>
                         <div className='flex flex-col gap-2'>
                             <h2 className='text-base font-bold'>Mail Us at</h2>
-                            <p className='text-sm font-semibold max-w-[400px]'>
+                            <div className='text-sm font-semibold max-w-[400px]'>
                                 <a href="mailto:ebinjacob@jlogistics.in" target='_blank' className='flex items-center gap-2'>
                                     <Image src={gmail} alt='' className='w-6 h-6'/>
-                                    <p>ebinjacob@jlogistics.in</p>
+                                    <span>ebinjacob@jlogistics.in</span>
                                 </a>
-                            </p>
-                            <p className='text-sm font-semibold max-w-[400px]'>
+                            </div>
+                            <div className='text-sm font-semibold max-w-[400px]'>
                                 <a href="mailto:imports@jlogistics.in" target='_blank' className='flex items-center gap-2'>
                                     <Image src={gmail} alt='' className='w-6 h-6'/>
-                                    <p>imports@jlogistics.in</p>
+                                    <span>imports@jlogistics.in</span>
                                 </a>
-                            </p>
+                            </div>
                         </div>
                     </div>
 
@@ -118,10 +180,12 @@ const ContactDetails = () => {
                                     value={message}
                                     onChange={handleMessageChange}
                                   />
-                                  <Button sx={{display:'inline-block'}}>Submit</Button>
+                                  <Button sx={{display:'inline-block'}} onClick={handleSubmit}>Submit</Button>
                             </Stack>
                             
                         </FormControl>
+                            {successMessage && <p className='text-center text-green-500 text-xs font-normal'>{successMessage}</p>}
+                            {Error && <p className='text-center text-red-500 text-xs font-normal'>{Error}</p>}
                         </Paper>
                         
                     </div>
