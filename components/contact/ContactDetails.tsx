@@ -22,10 +22,16 @@ const ContactDetails = () => {
     const handlePhoneNumberChange = (event: ChangeEvent<HTMLInputElement>) => {
         const inputValue = event.target.value;
        
-        const isValid = /^\d*$/.test(inputValue);
+        const isValid = /^\d{10}$/.test(inputValue);
         setPhoneNumber(inputValue);
         setPhoneNumberError(!isValid);
     };
+    
+
+
+
+
+
     const handleEmailChange = (event: ChangeEvent<HTMLInputElement>) => {
         const inputValue: string = event.target.value;
          
@@ -166,7 +172,7 @@ const ContactDetails = () => {
                                  value={phoneNumber}
                                  onChange={handlePhoneNumberChange}
                                  error={phoneNumberError}
-                                 helperText={phoneNumberError ? 'Please enter a valid number' : ' '}
+                                 helperText={phoneNumberError ? 'Please enter your valid 10 digit number' : ' '}
                                  InputProps={{
                                     inputProps: {
                                     pattern: '[0-9]*',
