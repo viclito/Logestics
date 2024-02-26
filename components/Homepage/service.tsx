@@ -121,8 +121,8 @@ const Service = () => {
             <div className='font-bold text-4xl lg:text-3xl md:text-2xl  text-center '>SERVICES</div>
             <div className='flex w-[100%] xl:flex-col pt-10 items-center md:gap-12'>
                 {/* left */}
-                <div className='w-[60%] md:w-[100%] flex relative h-[500px] md:h-[300px] items-center justify-center' ref={ref}>
-                    <div className='flex md:w-[360px] xs:w-[300px] relative m-auto md:h-[calc(200px+30px)] w-[600px] h-[350px]'>
+                <div className='w-[60%] xl:w-[100%] flex relative h-[500px] md:h-[300px] items-center justify-center' ref={ref}>
+                    <div className='flex md:w-[360px] xs:w-[300px] relative m-auto md:h-[calc(200px+30px)] h-[400px] w-[670px]'>
 
                         <motion.div style={{scaleY:scaleProgress, opacity:scaleProgress}} initial={{y:50}} whileInView={{y:0}} transition={{duration:.5}} className={` bg-white absolute overflow-hidden flex items-center justify-center transition-all duration-100 ${styles.image} ${one? 'h-[400px] w-[670px] z-40 md:h-[290px] md:w-[360px] xs:h-[260px] xs:w-[300px] rounded-lg left-0 top-0': 'h-[300px] w-[180px] md:h-[200px] md:w-[120px] xs:w-[100px] xs:h-[180px] rounded-full'}`} onClick={oneFunc}>
                             <Image src={ocean} alt='' className={`  ${styles.one} ${one?'h-[400px] w-[670px] z-40 md:h-[290px] md:w-[360px] xs:h-[260px] xs:w-[300px] rounded-lg':'h-[290px] w-[170px] md:h-[190px] md:w-[110px] xs:w-[90px] xs:h-[170px] rounded-full'}`}/>
@@ -148,7 +148,7 @@ const Service = () => {
                 </div>
                 {/* right */}
                 {zero ?
-                <div className='flex flex-col gap-4 w-[40%] md:w-[100%] justify-center items-center py-4'>
+                <div className='flex flex-col gap-4 w-[40%] xl:w-[100%] mx-auto justify-center items-center py-4'>
                     <h1 className='text-2xl font-bold text-center pb-6'>Services we Provide</h1>
                     <h3 className='w-[250px] p-2 border-2 border-solid bg-primary cursor-pointer text-white text-center font-bold rounded-3xl' onClick={oneFunc}>Ocean Freight</h3>
                     <h3 className='w-[250px] p-2 border-2 border-solid bg-primary cursor-pointer text-white text-center font-bold rounded-3xl' onClick={twoFunc}>Air Freight</h3>
@@ -158,7 +158,7 @@ const Service = () => {
                 </div>
                 :""}
                 {
-                    one?<div className={`flex flex-col relative gap-3 w-[40%] md:w-[100%] py-4 ${styles.glasscomponent}`} >
+                    one?<div className={`flex flex-col relative gap-3 w-[40%] xl:w-[70%] md:w-[100%] py-4 ${styles.glasscomponent}`} >
                         <Image src={cross} alt='' className='absolute right-4 top-4 w-4 h-4 cursor-pointer' onClick={zeroFunc}/>
                         <h2 className='text-xl font-semibold text-center text-primary'>Ocean Freight</h2>
                         <h3 className='text-base font-medium p-3'>Logistics is your gateway to global trade via the high seas. Our ocean freight services ensure secure and timely transportation of your cargo to any corner of the world. From Full Container Loads (FCL) to Less than Container Loads (LCL), we provide tailored solutions to suit your shipping requirements.</h3>
@@ -169,7 +169,7 @@ const Service = () => {
                     :''
                 }
                 {
-                    two?<div className={`flex flex-col relative gap-3 w-[40%] md:w-[100%] py-4 ${styles.glasscomponent}`} >
+                    two?<div className={`flex flex-col relative gap-3 w-[40%] xl:w-[70%] md:w-[100%] py-4 ${styles.glasscomponent}`} >
                         <Image src={cross} alt='' className='absolute right-4 top-4 w-4 h-4 cursor-pointer' onClick={zeroFunc}/>
                         <h2 className='text-xl font-semibold text-center text-primary'>Air Freight</h2>
                         <h3 className='text-base font-medium p-3'>When time is of the essence, trust J Logistics to deliver your goods with speed and precision. Our air freight services are designed to meet tight deadlines, providing swift and reliable transportation for your valuable cargo. From small packages to oversized shipments, we have the expertise to handle it all.</h3>
@@ -180,7 +180,7 @@ const Service = () => {
                     :''
                 }
                 {
-                    three?<div className={`flex flex-col relative gap-3 w-[40%] md:w-[100%] py-4 ${styles.glasscomponent}`} >
+                    three?<div className={`flex flex-col relative gap-3 w-[40%] xl:w-[70%] md:w-[100%] py-4 ${styles.glasscomponent}`} >
                         <Image src={cross} alt='' className='absolute right-4 top-4 w-4 h-4 cursor-pointer' onClick={zeroFunc}/>
                         <h2 className='text-xl font-semibold text-center text-primary'>Break Bulk</h2>
                         <h3 className='text-base font-medium p-3'>For unconventional or oversized cargo that doesnot fit into standard shipping containers, our break bulk services offer a specialized solution. J Logistics ensures the safe and secure transportation of your unique shipments, providing customized logistics solutions for your specific needs.</h3>
@@ -191,7 +191,7 @@ const Service = () => {
                     :''
                 }
                 {
-                    four?<div className={`flex flex-col relative gap-3 w-[40%] md:w-[100%] py-4 ${styles.glasscomponent}`} >
+                    four?<div className={`flex flex-col relative gap-3 w-[40%] xl:w-[70%] md:w-[100%] py-4 ${styles.glasscomponent}`} >
                         <Image src={cross} alt='' className='absolute right-4 top-4 w-4 h-4 cursor-pointer' onClick={zeroFunc}/>
                         <h2 className='text-xl font-semibold text-center text-primary'>WareHouse</h2>
                         <h3 className='text-base font-medium p-3'>Our state-of-the-art warehouses are equipped to handle your storage and distribution needs. Whether you require short-term storage or long-term solutions, J Logistics provides secure warehouse services with advanced inventory management systems, ensuring the safety and accessibility of your goods.</h3>
@@ -202,7 +202,7 @@ const Service = () => {
                     :''
                 }
                 {
-                    five?<div className={`flex flex-col relative gap-3 w-[40%] md:w-[100%] py-4 ${styles.glasscomponent}`} >
+                    five?<div className={`flex flex-col relative gap-3 w-[40%] xl:w-[70%] md:w-[100%] py-4 ${styles.glasscomponent}`} >
                         <Image src={cross} alt='' className='absolute right-4 top-4 w-4 h-4 cursor-pointer' onClick={zeroFunc}/>
                         <h2 className='text-xl font-semibold text-center text-primary'>Multimodal Transport</h2>
                         <h3 className='text-base font-medium p-3'>J Logistics specializes in multimodal transport, offering a combination of transportation modes to provide the most efficient and cost-effective solution for your cargo. Our expertise in coordinating air, ocean, and ground transportation ensures a seamless journey for your shipments from origin to destination.</h3>
