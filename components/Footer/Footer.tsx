@@ -85,7 +85,7 @@ const Footer = () => {
                   <h3 className='text-base sm:text-sm font-semibold pt-3'>Phone Number</h3>
                   <p className='text-sm sm:text-xs font-medium flex gap-1 items-center'>
                      <a href="tel:9176202876"> <Image src={telephone} alt='' className='w-6 h-6'/></a> 
-                     <a href="tel:9176202876">+9176202876</a>
+                     <a href="tel:9176202876">+91 9176202876</a>
                   </p>
                   
                 </div>
