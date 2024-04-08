@@ -3,6 +3,7 @@ import whatsapp from '../../public/assets/whatsapp.png'
 import gmail from '../../public/assets/gmail.png'
 import telephone from '../../public/assets/telephone.png'
 import Image from 'next/image';
+import arrow from '../../public/assets/next.png'
 
 
 const SvgComponent: FC<SVGProps<SVGSVGElement>> = ({ className, ...props }) => (
@@ -91,6 +92,11 @@ const Footer = () => {
                 </div>
               </div>
             </div>
+        </div>
+
+        <div className='w-screen bg-black flex justify-end gap-2'>
+          <Image alt='' src={arrow} className='w-6'/>
+          <h6 className='text-end text-white pr-6 py-1 font-bold text-xs'><a href="https://portfolio-git-main-berglins-projects.vercel.app/" target='_blank'>Designed and developed by :  Berglin</a> </h6>
         </div>
     </div>
   )
